@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио | Вячеслав Царегородцев</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Vyacheslav<span>Design</span></a>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="portfolio.html" class="active">Портфолио</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Портфолио страница -->
+    <main id="portfolio-page">
+        <!-- Герой-секция -->
+        <section class="portfolio-hero">
+            <div class="container portfolio-hero-content">
+                <h1>Мои работы</h1>
+                <p>Здесь представлены мои лучшие проекты в области веб-дизайна, графики и брендинга</p>
+            </div>
+        </section>
+
+        <!-- Работы -->
+        <section class="portfolio">
+            <div class="container">
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">Все работы</button>
+                    <button class="filter-btn" data-filter="web">Веб-дизайн</button>
+                    <button class="filter-btn" data-filter="branding">Брендинг</button>
+                    <button class="filter-btn" data-filter="graphic">Графика</button>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" data-category="web">
+                        <img src="images/2.jpg" alt="Веб-сайт для кофейни">
+                        <div class="portfolio-overlay">
+                            <h3>Веб-сайт для кофейни</h3>
+                            <p>Полный дизайн и разработка сайта для местной кофейни</p>
+                            <a href="#" class="btn" style="margin-top: 15px;">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="branding">
+                        <img src="images/3.jpg" alt="Брендинг для стартапа">
+                        <div class="portfolio-overlay">
+                            <h3>Брендинг для стартапа</h3>
+                            <p>Разработка логотипа и фирменного стиля для IT-компании</p>
+                            <a href="#" class="btn" style="margin-top: 15px;">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="graphic">
+                        <img src="images/4.jpg" alt="Полиграфия для ресторана">
+                        <div class="portfolio-overlay">
+                            <h3>Полиграфия для ресторана</h3>
+                            <p>Дизайн меню, визиток и другой полиграфической продукции</p>
+                            <a href="#" class="btn" style="margin-top: 15px;">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="web">
+                        <img src="images/5.jpg" alt="Интернет-магазин">
+                        <div class="portfolio-overlay">
+                            <h3>Интернет-магазин</h3>
+                            <p>UI/UX дизайн и фронтенд-разработка интернет-магазина</p>
+                            <a href="#" class="btn" style="margin-top: 15px;">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="branding">
+                        <img src="images/6.jpg" alt="Ребрендинг компании">
+                        <div class="portfolio-overlay">
+                            <h3>Ребрендинг компании</h3>
+                            <p>Обновление фирменного стиля для юридической фирмы</p>
+                            <a href="#" class="btn" style="margin-top: 15px;">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="graphic">
+                        <img src="images/7.jpeg" alt="Иллюстрации для книги">
+                        <div class="portfolio-overlay">
+                            <h3>Иллюстрации для книги</h3>
+                            <p>Создание серии иллюстраций для детской книги</p>
+                            <a href="#" class="btn" style="margin-top: 15px;">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-behance"></i></a>
+                <a href="#"><i class="fab fa-dribbble"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>&copy; 2025 Вячеслав Царегородцев. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Мобильное меню
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        // Фильтрация портфолио
+        const filterButtons = document.querySelectorAll

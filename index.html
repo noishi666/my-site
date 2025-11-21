@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вячеслав Царегородцев | Дизайнер</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Vyacheslav<span>Design</span></a>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="portfolio.html">Портфолио</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главная страница -->
+    <main id="home-page">
+        <!-- Герой-секция -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>Вячеслав Царегородцев</h1>
+                <p>Графический дизайнер и веб-разработчик с более чем 5-летним опытом создания визуально привлекательных и функциональных решений</p>
+                <a href="portfolio.html" class="btn">Смотреть работы</a>
+            </div>
+        </section>
+
+        <!-- Обо мне -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2>Обо мне</h2>
+                <div class="about-content">
+                    <div class="about-img">
+                        <img src="images/1.jpg" alt="Вячеслав Царегородцев">
+                    </div>
+                    <div class="about-text">
+                        <p>Привет! Я Вячеслав, профессиональный графический дизайнер и веб-разработчик. Специализируюсь на создании современных, эстетичных и функциональных дизайнов для веб-сайтов, приложений и брендов.</p>
+                        <p>Мой подход сочетает в себе креативное мышление, внимание к деталям и глубокое понимание пользовательского опыта. Я стремлюсь создавать дизайны, которые не только красивы, но и эффективно решают бизнес-задачи.</p>
+                        <div class="skills">
+                            <span class="skill">UI/UX дизайн</span>
+                            <span class="skill">Веб-разработка</span>
+                            <span class="skill">Брендинг</span>
+                            <span class="skill">Графический дизайн</span>
+                            <span class="skill">Анимация</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Услуги -->
+        <section class="services" id="services">
+            <div class="container">
+                <h2>Мои услуги</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>UI/UX Дизайн</h3>
+                        <p>Создание интуитивно понятных и визуально привлекательных интерфейсов для веб-сайтов и мобильных приложений.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Веб-разработка</h3>
+                        <p>Разработка адаптивных и современных веб-сайтов с использованием передовых технологий.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <h3>Графический дизайн</h3>
+                        <p>Создание логотипов, брендбуков, полиграфии и другой графической продукции.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-behance"></i></a>
+                <a href="#"><i class="fab fa-dribbble"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>&copy; 2025 Вячеслав Царегородцев. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Мобильное меню
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        // Плавная прокрутка для якорных ссылок
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Закрываем мобильное меню после клика
+                    document.querySelector('nav ul').classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
